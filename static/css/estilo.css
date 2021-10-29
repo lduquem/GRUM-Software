@@ -1,0 +1,321 @@
+* {
+    padding: 0px;
+    margin: 0px;
+
+}
+
+#lateral{
+    position: fixed;
+    width: 15%;
+    height:100%;
+    background-color:rgb(176, 176, 241);
+    padding: auto;
+    text-decoration: none;
+  
+
+}
+
+#contenido{
+    position: fixed;
+    width: 85%;
+    margin-left: 15%;
+    height:100%;
+    background-color:rgb(216, 216, 228);
+    padding: auto;
+    text-decoration: none;
+    overflow-y: scroll;
+
+  
+
+}
+
+
+
+
+#lateral ul{
+ margin-top: auto;
+ margin-bottom: auto;
+ height: 40px;
+text-align: center;
+text-decoration: none;
+
+}
+
+#lateral a{
+    text-decoration: none;
+}
+
+#lateral ul:hover{
+    background-color:white;
+    height: 40px;
+ 
+    
+}
+
+
+#principal{
+
+
+    position: fixed;
+    width: 80%;
+    height:100%;
+    margin: auto;
+    margin-left: 10%;
+    overflow-x:scroll;
+
+
+    
+    
+
+
+}
+
+
+.separador{
+    border-top: 1px solid black;
+    max-width: 300px;
+    height: 2px;
+    padding:0;
+
+}
+
+.separadorbody{
+    border-top: 2px solid black;
+    max-width: 300px;
+    height: 2px;
+    padding:0;
+    margin-left: 10%;
+    margin-top: 10%;
+
+
+
+}
+
+
+.icono {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left:15px;
+    margin-bottom: 20px;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    display: block;
+   
+}
+
+.icono2{
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    display: block;
+
+}
+
+.titulo{
+    text-align: center;
+    color: red; 
+    margin-bottom: 5%;
+  
+}
+
+
+.columna{
+    margin-left: 10%;
+    width: 40%;
+    float:left;
+    color:solid black;
+    font-weight: bolder;
+    padding-top: 7px;
+
+}
+
+.columna2{
+    margin-left: 10%;
+    width: 90%;
+    float:left;
+    color:solid black;
+    font-weight: bolder;
+    padding-top: 7px;
+
+
+}
+
+.formulario{
+    margin-left: 0%;
+    margin-top: 30px;
+    text-align: left;
+    box-sizing: content-box;
+
+
+
+}
+
+
+
+#divi1{
+    height: 5%;
+    width: 100%;
+    margin-left: 0%;
+    margin-right:0%;
+    margin-top: 0%;
+
+    position: relative;
+    padding: auto;
+    padding-bottom: 50px;
+    border: solid #5badcd 10px;
+
+
+}
+
+
+
+#divi2{
+    height: 15%;
+    width:100%;
+    margin-left: 0%;
+    margin-right:0%;
+    margin-top: 0%;
+    position: relative;
+    padding: auto;
+    padding-bottom: 50px;
+    border: solid #5a717a 10px;
+
+
+}
+
+
+#divi3{
+    height: 60%;
+    width: 100%;
+    margin-left: 0%;
+    margin-right:0%;
+    margin-top: 0%;
+    position: relative;
+    padding: auto;
+    padding-bottom: 50px;
+    border: solid #ca280b 10px;
+
+
+}
+
+#divi4{
+    height: 20%;
+    width: 100%;
+    margin-left: 0%;
+    margin-right:0%;
+    margin-top: 0%;
+    position: relative;
+    padding: auto;
+    padding-bottom: 50px;
+
+
+}
+
+
+
+
+#div1{
+    height: 5%;
+    width: 80%;
+    margin-left: 0%;
+    margin-right:0%;
+    position: fixed;
+    padding: auto;
+    padding-bottom: 50px;
+    border: solid #5badcd 10px;
+
+
+}
+
+
+#div2{
+    height: 14%;
+    width: 80%;
+    margin-left:0%;
+    margin-right:0%;
+    margin-top:7%;
+    position: fixed;
+    border: solid rgb(2, 0, 128) 10px;
+
+
+
+
+}
+
+
+#div3{
+    height: 50%;
+    width: 80%;
+    margin-left: 0%;
+    margin-right:0%;
+    margin-top:16%;
+    position: fixed;
+    border: solid rgb(128, 0, 0) 10px;
+
+
+}
+
+
+#div3b{
+    height: 70%;
+    width: 90%;
+    margin-left: 10%;
+    margin-right:0%;
+    margin-top:16%;
+    position: fixed;
+    border: solid rgb(128, 0, 0) 10px;
+
+
+}
+
+#div4{
+    height: 5%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right:0%;
+    margin-top:10%;
+    position: fixed;
+    border: solid rgb(238, 231, 231) 10px;
+
+
+}
+
+
+#div5{
+    width: 76%;
+    margin-left: 10%;
+    margin-right: 20%;
+
+    border-top: 3px solid black;
+}
+
+#div6{
+    height: 15%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right:0%;
+    margin-top:14%;
+    position: fixed;
+    border: rgb(119, 207, 241) 10px;
+
+}
+
+
+#div7{
+    height: 30%;
+    width: 80%;
+    margin-left: 10%;
+    margin-right:0%;
+    margin-top:50%;
+    position: fixed;
+    border: solid rgb(238, 231, 231) 10px;
+
+
+}
+
+textarea{
+    width: 80%;
+    height: 200px;
+    display: block;
+    border-radius: 10px;
+}

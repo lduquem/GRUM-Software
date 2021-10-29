@@ -1,0 +1,100 @@
+.icono {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left:25px;
+    border-radius: 50px;
+    width: 150px;
+    height: 150px;
+    display: block;
+   
+}
+
+
+.navegacion {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:whitesmoke ;
+    text-align: center;
+    padding: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+
+
+
+    
+
+}
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+
+}
+
+#blatera{
+position: fixed;
+    height: 100%;
+    width: 15%;
+    background-color: chocolate;
+   
+
+}
+
+#blatera label {
+   
+    text-align: center;
+    padding: auto;
+    cursor: pointer;
+    
+}
+
+
+#blatera label:hover{
+    background-color: darkblue;
+    height: 5px;
+ 
+    
+}
+
+
+.separador{
+    border-top: 1px solid black;
+    max-width: 200px;
+    height: 2px;
+    padding:0;
+
+}
+
+#principal{
+
+    width: 85%;
+    height:100%;
+    margin: auto;
+    margin-right: 0%;
+    background-color: cadetblue;
+
+}
+
+h2 {
+    color:solid black;
+    text-decoration: none;
+    text-shadow: 10px;
+    margin-bottom: 50px;
+
+}
+
+form {
+    background-color: #ccc;
+    width: 350px;
+    padding: 16px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+input {
+    margin: 3%;
+}
+
+#enviar {
+    text-align: center;
+    font-weight: bold;
+}

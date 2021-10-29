@@ -1,0 +1,44 @@
+{% extends 'basesuper.html' %}
+
+{% block content1%}
+
+<h1 class="titulo">Eliminar Usuario</h1>
+
+
+{% endblock content1%}
+
+
+{% block content2%}
+<div class="columna2">
+
+    <form action="" class="formulario" method="POST" >
+
+
+    {{form.documento.label}}
+    {{form.documento}}
+    {{form.buscar}}
+
+            
+    </form>
+</div>
+
+
+
+
+{% endblock content2%}
+
+{% block content3%}
+<center>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul class=flashes>
+            {% for message in messages %}
+               <h2> <li>{{ message }}</li></h2>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% endwith %}
+
+    </center>
+{% endblock content3%}
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}" type="text/css" >
+    <script src="{{ url_for('static', filename='js/validaciones.js') }}" ></script>
+        <title>SuperAdmin</title>
+</head>
+<body>
+    <div id="lateral">
+
+
+        <div> <img class="icono" src="{{ url_for('static', filename='img/admin.jpeg') }}" alt="aqui va el logo"></div>
+        <div><b></b></div>
+
+
+        <div class="separador"></div>
+        <div><b>{{session['nombre'] }}</b></div>
+
+        <div>
+          
+        </div>
+        <div class="separador"></div>
+        
+        
+        <div> <ul><a href="/dashboard" >Dashboard</a></ul></div>
+        <div class="separador"></div>
+
+
+        <div> <ul><a href="/inicio"  >Mi inicio</a></ul></div>
+
+        <div class="separador"></div>
+
+        <div> <ul><a href="/crearusuario">crearusuario</a></ul></div>
+
+        <div class="separador"></div>
+        <div> <ul><a href="/editarusuario" >Editar usuario</a></ul></div>
+        <div class="separador"></div>
+
+        <div> <ul><a href="/eliminar">Eliminar usuario</a></ul></div>
+        <div class="separador"></div>
+
+        <div> <ul><a href=/retro>crear retroalimentacion</a></ul></div>
+        <div class="separador"></div>
+
+        <div> <ul><a href="/login" target="black">Salir</a></ul></div>
+        <div class="separador"></div>
+    </div>
+
+
+    <div id="contenido">
+        <div id='divi1'>
+        {%block content1 %} 
+        {%endblock%}
+        </div>
+
+        <div id='divi2'>
+        {%block content2 %} 
+        {%endblock%}
+        </div>
+
+        <div id='divi3'>
+        {%block content3 %} 
+        {%endblock%}
+        </div>
+
+        <div id='divi4'>
+            <img   src="{{ url_for('static', filename='img/download.jpeg') }}" width="100%" height="150px" alt="aqui va el logo">
+        </div>
+
+
+
+        
+
+    </div>
+
+
+      
+      
+
+  
+</body>
+</html>

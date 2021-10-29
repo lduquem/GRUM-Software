@@ -1,0 +1,160 @@
+{% extends 'baseadmin.html' %}
+
+{% block content1%}
+
+<center>
+    <h1 class="titulo">Registrar Usuario</h1>
+</center>
+
+{% endblock content1%}
+
+
+
+
+{% block content2%}
+
+<div class="columna">
+    <h2>Datos Personales</h2>
+</div >
+
+<div class="columna">
+   <img class=icono2 src="{{ url_for('static', filename='img/admin.jpeg') }}" alt="adjuntar foto">
+</div >
+
+<div>
+<hr class="separadorbody">
+</div >
+
+
+
+   
+{% endblock content2%}
+
+
+
+{% block content3%}
+<center>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    <ul class=flashes>
+        {% for message in messages %}
+           <h2> <li>{{ message }}</li></h2>
+        {% endfor %}
+    </ul>
+{% endif %}
+{% endwith %}
+</center>
+
+<form action="" class="formulario" method="POST">
+    <div class="columna">
+        {{form.nombre.label}}
+        {{form.nombre}}
+      
+    </div>
+
+    <div class="columna">
+        {{form.apellido.label}}
+        {{form.apellido}}
+    </div>
+
+    <div class="columna">
+
+        {{form.tdocumento.label}}
+        {{form.tdocumento}}
+
+
+    </div>
+
+    <div class="columna">
+
+        {{form.documento.label}}
+        {{form.documento}}
+
+    </div>
+
+    <div class="columna">
+        {{form.email.label}}
+        {{form.email}}
+       
+    </div>
+
+
+    <div class="columna">   
+        {{form.celular.label}}
+        {{form.celular}}
+
+    </div>   
+
+
+    <div style="padding-top: 100px">
+        <hr id=div5>
+
+    </div>
+
+    <div class="columna2">
+        <h2 style="padding-bottom: 60px">Datos Laborales</h2>
+    </div >
+    
+    <div class="columna">
+        {{form.fechainicio.label}}
+        {{form.fechainicio}}
+       
+    </div >
+
+
+    <div class="columna">
+        {{form.fechafinalizacion.label}}
+        {{form.fechafinalizacion}}
+
+    </div >
+
+    <div class="columna2">
+        {{form.contrato.label}}
+        {{form.contrato}}
+    </div>
+    <div class="columna">
+        {{form.cargo.label}}
+        {{form.cargo}}
+    </div>
+
+
+    <div class="columna">
+        {{form.dependencia.label}}
+        {{form.dependencia}}
+    </div>
+
+    <div class="columna2">
+        {{form.salario.label}}
+        {{form.salario}}
+    </div> 
+
+
+    <div class="columna">
+
+        {{form.contrasena.label}}
+        {{form.contrasena}}
+    </div>   
+    <div class="columna">
+        {{form.rcontrasena.label}}
+        {{form.rcontrasena}}
+    </div>   
+
+
+    <div >
+        <center>
+            {{form.enviar}}
+
+           
+        
+        </center>
+        
+    </div>
+    <div class="columna">
+    </div>
+
+
+  
+</form>
+   
+{% endblock content3%}
+

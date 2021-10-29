@@ -1,0 +1,217 @@
+{% if session['rol'] == 'Superadmin' %}
+    {% extends 'basesuper_prueba.html' %}
+{% else %}
+    {% extends 'baseadmin_prueba.html' %}
+{% endif %}
+
+{% block contenido_principal%}
+
+<div class="content-wrapper">
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+
+                    {% if session['rol'] == 'Superadmin' %}
+                        <div class="from-group">
+                            <a href="/dashboard" class="btn btn-outline-primary btn-lg" role="button" aria-pressed="true">
+                                <i class="fa fa-tachometer-alt"></i>
+                                Dashboard
+                            </a>
+                            <a href="/usuarios" class="btn btn-outline-primary btn-lg" role="button" aria-pressed="true">
+                                <i class="fa fa-users"></i>
+                                Usuarios
+                            </a>
+                            <a href="/retroalimentaciones" class="btn btn-outline-primary btn-lg" role="button" aria-pressed="true">
+                                <i class="fa fa-tasks"></i>
+                                Retroalimentaciones
+                            </a>
+                        </div>
+                    {% else %}
+                        <div class="from-group">
+                            <a href="/usuarios" class="btn btn-outline-primary btn-lg" role="button" aria-pressed="true">
+                                <i class="fa fa-users"></i>
+                                Usuarios
+                            </a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card card-primary">
+
+                        <div class="card-header">
+                            <h3 class="card-title">Agregar Usuario</h3>
+                        </div>
+                        <div class="card-body">
+
+                            <center>
+                                {% with messages = get_flashed_messages() %}
+                                    {% if messages %}
+                                        <ul class=flashes>
+                                            {% for message in messages %}
+                                            <h2> <li>{{ message }}</li></h2>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                {% endwith %}
+                            </center>
+
+                            <form action="/crearusuario" method="POST">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            {{form.nombre.label}}
+                                            {{form.nombre}}
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            {{form.apellido.label}}
+                                            {{form.apellido}}
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            {{form.tdocumento.label}}
+                                            {{form.tdocumento}}
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            {{form.documento.label}}
+                                            {{form.documento}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            {{form.dependencia.label}}
+                                            {{form.dependencia}}
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            {{form.cargo.label}}
+                                            {{form.cargo}}
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            {{form.celular.label}}
+                                            {{form.celular}}
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            {{form.email.label}}
+                                            {{form.email}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            {{form.contrato.label}}
+                                            {{form.contrato}}
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            {{form.salario.label}}
+                                            {{form.salario}}
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        {{form.fechainicio.label}}
+                                        <div class="input-group">
+                                            {{form.fechainicio}}
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        {{form.fechafinalizacion.label}}
+                                        <div class="input-group">
+                                            {{form.fechafinalizacion}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                          
+                                        {%if session['rol'] == 'administrador'%}
+                                                 {{form.tipousuario.label}}
+                                                 {{form.tipousuario(disabled=true)}}
+
+                                        {%else%}
+                                                 {{form.tipousuario.label}}
+                                                 {{form.tipousuario}}
+
+                                        {%endif %}
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            {{form.contrasena.label}}
+                                            {{form.contrasena}}
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            {{form.rcontrasena.label}}
+                                            {{form.rcontrasena}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <!-- <button type="submit" class="btn btn-block btn-outline-primary btn-lg"><i class="fa fa-cloud-upload-alt"></i> Guardar</button> -->
+                                        {{form.enviar}}
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock contenido_principal%}
+
+{% block datepicker %}
+<script src="{{ url_for('static', filename='plugins/select2/js/select2.full.min.js') }}"></script>
+<script src="{{ url_for('static', filename='plugins/inputmask/jquery.inputmask.min.js') }}"></script>
+<script>
+    $(function () {
+        //Initialize Select2 Elements
+        $('.select2').select2()
+
+        //Initialize Select2 Elements
+        $('.select2bs4').select2({
+        theme: 'bootstrap4'
+        })
+
+        //Datemask dd/mm/yyyy
+        $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+        //Datemask2 mm/dd/yyyy
+        $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+        //Money Euro
+        $('[data-mask]').inputmask()
+
+    })
+    // BS-Stepper Init
+    document.addEventListener('DOMContentLoaded', function () {
+        window.stepper = new Stepper(document.querySelector('.bs-stepper'))
+    })
+</script>
+
+{% endblock datepicker %}

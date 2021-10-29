@@ -1,0 +1,68 @@
+{% extends 'baseempleado_prueba.html' %}
+
+{% block contenido_principal %}
+
+<div class="content-wrapper">
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <div class="from-group">
+                <a href="/crearusuario" class="btn btn-outline-primary btn-lg" role="button" aria-pressed="true">
+                    <i class="fa fa-user-eye"></i>
+                    Ver retroalimentación
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card card-primary">
+                        <div class="card card-primary">
+                            <div class="card-header">
+                                <h3 class="card-title">Ver Retros</h3>
+                            </div>
+                            <div class="card-body">
+                                <table id="example2" class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>Retro</th>
+                                            <th>Puntaje</th>
+                                            <th>Mes</th>
+                                            <th>Año</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for retro in allretros %}
+                                        <tr>
+                                            <td>{{ retro['retro'] }}</td>
+                                            <td>{{ retro['puntaje'] }}</td>
+                                            <td>{{ retro['mes'] }}</td>
+                                            <td>{{ retro['ano'] }}</td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Retro</th>
+                                            <th>Puntaje</th>
+                                            <th>Mes</th>
+                                            <th>Año</th>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock contenido_principal%}

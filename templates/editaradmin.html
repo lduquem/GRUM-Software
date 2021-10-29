@@ -1,0 +1,135 @@
+{% extends 'baseadmin.html' %}
+
+{% block content1%}
+
+<h1 class="titulo">Editar Usuario</h1>
+
+
+{% endblock content1%}
+
+
+{% block content2%}
+<div class="columna2">
+    <form action="" class="formulario" method="POST">
+
+    <div class="columna">
+        {{form.documento.label}}
+        {{form.documento}}
+                {{form.consultar}}
+
+        </div>
+    <div class="columna">
+
+    </div>
+    <center>
+       
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <il class=flashes>
+                {% for message in messages %}
+                   <h2> <li>{{ message }}</li></h2>
+                {% endfor %}
+            </il>
+        {% endif %}
+        {% endwith %}
+        
+        </center>
+</div>
+
+
+
+
+{% endblock content2%}
+
+
+
+{% block content3%}
+
+    <div class="columna">
+        {{form.nombre.label}}
+        {{form.nombre}}
+    </div>
+
+    <div class="columna">
+        {{form.apellido.label}}
+        {{form.apellido}}
+    </div>
+
+    <div class="columna">
+
+        {{form.email.label}}
+        {{form.email}}
+    </div>
+
+    <div class="columna">
+        {{form.celular.label}}
+        {{form.celular}}
+    </div>   
+
+    <div style="padding-top: 100px">
+        <hr id=div5>
+
+    </div>
+
+    <div class="columna2">
+        <h2 style="padding-bottom: 60px">Datos Laborales</h2>
+    </div >
+
+    <div class="columna">
+        {{form.contrato.label}}
+        {{form.contrato}}
+    </div >
+
+    <div class="columna">
+        {{form.fechainicio.label}}
+        {{form.fechainicio}}
+    </div >
+
+    <div class="columna2">
+        {{form.fechafinalizacion.label}}
+        {{form.fechafinalizacion}}
+    </div>
+
+    <div class="columna">
+        {{form.cargo.label}}
+        {{form.cargo}}
+    </div>
+
+    <div class="columna">
+        <label for="">Dependencia </label>
+        {{form.dependencia.label}}
+        {{form.dependencia}}
+
+       </select>
+    </div>
+
+
+    <div class="columna2">
+        {{form.salario.label}}
+        {{form.salario}}
+    </div> 
+
+    <div class="columna">
+
+        {{form.contrasena.label}}
+        {{form.contrasena}}
+    </div>   
+    <div class="columna">
+
+      
+        {{form.rcontrasena.label}}
+        {{form.rcontrasena}}
+    </div>   
+
+
+    <div class="columna">
+        <center>
+
+        {{form.guardar}}
+        </center>
+    </div>
+ 
+</form>
+  
+{% endblock content3%}
+
